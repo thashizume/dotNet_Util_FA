@@ -43,9 +43,11 @@ Partial Class Form1
         Me.MoveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.UcInfo1 = New jp.polestar.io.FileAnalyze.ucInfo()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
+        Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -122,8 +124,12 @@ Partial Class Form1
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.Controls.Add(Me.DataGridView1)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.UcInfo1)
         Me.SplitContainer1.Size = New System.Drawing.Size(980, 443)
-        Me.SplitContainer1.SplitterDistance = 842
+        Me.SplitContainer1.SplitterDistance = 841
         Me.SplitContainer1.TabIndex = 2
         '
         'DataGridView1
@@ -141,14 +147,14 @@ Partial Class Form1
         Me.DataGridView1.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.RowTemplate.Height = 21
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(842, 443)
+        Me.DataGridView1.Size = New System.Drawing.Size(841, 443)
         Me.DataGridView1.TabIndex = 0
         '
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SELECTToolStripMenuItem, Me.ToolStripSeparator1, Me.ZipArchiveToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.MoveToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(142, 98)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 120)
         '
         'SELECTToolStripMenuItem
         '
@@ -179,6 +185,15 @@ Partial Class Form1
         Me.MoveToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.MoveToolStripMenuItem.Text = "&Move"
         '
+        'UcInfo1
+        '
+        Me.UcInfo1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.UcInfo1.Location = New System.Drawing.Point(0, 0)
+        Me.UcInfo1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.UcInfo1.Name = "UcInfo1"
+        Me.UcInfo1.Size = New System.Drawing.Size(135, 443)
+        Me.UcInfo1.TabIndex = 0
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -195,6 +210,7 @@ Partial Class Form1
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -223,5 +239,6 @@ Partial Class Form1
     Friend WithEvents DeleteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MoveToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
+    Friend WithEvents UcInfo1 As jp.polestar.io.FileAnalyze.ucInfo
 
 End Class

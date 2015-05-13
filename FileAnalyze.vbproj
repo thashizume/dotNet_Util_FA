@@ -62,9 +62,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SpreadsheetGear">
-      <HintPath>C:\Users\toshi\Desktop\SpreadsheetGear\SpreadsheetGear.dll</HintPath>
-    </Reference>
+    <Reference Include="SpreadsheetGear, Version=6.0.3.190, Culture=neutral, PublicKeyToken=39c186f5904944ec, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -112,6 +110,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ucFilterList.Designer.vb">
+      <DependentUpon>ucFilterList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucFilterList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucInfo.Designer.vb">
+      <DependentUpon>ucInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucInfo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -122,6 +132,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucFilterList.resx">
+      <DependentUpon>ucFilterList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucInfo.resx">
+      <DependentUpon>ucInfo.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
