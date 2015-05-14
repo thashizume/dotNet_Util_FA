@@ -56,7 +56,7 @@
             ' TODO: Use BackgroundProcess
             _dt = _fl.Analyse(Me.FolderBrowserDialog1.SelectedPath)
 
-            Dim dv1 As System.Data.DataView = New System.Data.DataView(_fl.Files, _conditionString, "SELECTED desc, DIRECTORY_NAME", DataViewRowState.CurrentRows)
+            Dim dv1 As System.Data.DataView = New System.Data.DataView(_fl.getFiles, _conditionString, "SELECTED desc, DIRECTORY_NAME", DataViewRowState.CurrentRows)
             DataGridView1.Columns.Clear()
             '     DataGridView1.Columns(0).Visible = False
             DataGridView1.AutoGenerateColumns = True
@@ -79,7 +79,7 @@
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub ExtentsNameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExtentsNameToolStripMenuItem.Click
-        Dim dv1 As System.Data.DataView = New System.Data.DataView(_fl.Extents, _conditionString, "SIZE desc", DataViewRowState.CurrentRows)
+        Dim dv1 As System.Data.DataView = New System.Data.DataView(_fl.getExtents, _conditionString, "SIZE desc", DataViewRowState.CurrentRows)
         If dv1.Count = 0 Then Return
 
         DataGridView1.Columns.Clear()
@@ -100,7 +100,7 @@
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub DirectoryNameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DirectoryNameToolStripMenuItem.Click
-        Dim dv1 As System.Data.DataView = New System.Data.DataView(_fl.Directories, _conditionString, "SIZE desc", DataViewRowState.CurrentRows)
+        Dim dv1 As System.Data.DataView = New System.Data.DataView(_fl.getDirectories, _conditionString, "SIZE desc", DataViewRowState.CurrentRows)
         If dv1.Count = 0 Then Return
 
         DataGridView1.Columns.Clear()
@@ -122,7 +122,7 @@
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub FileToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles FileToolStripMenuItem1.Click
-        Dim dv1 As System.Data.DataView = New System.Data.DataView(_fl.Files, _conditionString, "SELECTED desc, DIRECTORY_NAME", DataViewRowState.CurrentRows)
+        Dim dv1 As System.Data.DataView = New System.Data.DataView(_fl.getFiles, _conditionString, "SELECTED desc, DIRECTORY_NAME", DataViewRowState.CurrentRows)
         If dv1.Count = 0 Then Return
 
         DataGridView1.Columns.Clear()
@@ -162,7 +162,7 @@
                 Next
                 _fl.SeleteFile(f.ToArray)
 
-                Dim dv1 As System.Data.DataView = New System.Data.DataView(_fl.Files, _conditionString, "SELECTED desc, DIRECTORY_NAME", DataViewRowState.CurrentRows)
+                Dim dv1 As System.Data.DataView = New System.Data.DataView(_fl.getFiles, _conditionString, "SELECTED desc, DIRECTORY_NAME", DataViewRowState.CurrentRows)
                 DataGridView1.Columns.Clear()
                 '     DataGridView1.Columns(0).Visible = False
                 DataGridView1.AutoGenerateColumns = True

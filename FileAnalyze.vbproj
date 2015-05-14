@@ -87,6 +87,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Filter.Designer.vb">
+      <DependentUpon>Filter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Filter.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ucFilterCheckbox.Designer.vb">
+      <DependentUpon>ucFilterCheckbox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucFilterCheckbox.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucFilterDateRange.Designer.vb">
+      <DependentUpon>ucFilterDateRange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucFilterDateRange.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucFilterKeyword.Designer.vb">
+      <DependentUpon>ucFilterKeyword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucFilterKeyword.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ucFilterList.Designer.vb">
       <DependentUpon>ucFilterList.vb</DependentUpon>
     </Compile>
@@ -122,8 +146,17 @@
     <Compile Include="ucInfo.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ucSubMenu.Designer.vb">
+      <DependentUpon>ucSubMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucSubMenu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Filter.resx">
+      <DependentUpon>Filter.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -133,11 +166,23 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucFilterCheckbox.resx">
+      <DependentUpon>ucFilterCheckbox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucFilterDateRange.resx">
+      <DependentUpon>ucFilterDateRange.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucFilterKeyword.resx">
+      <DependentUpon>ucFilterKeyword.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucFilterList.resx">
       <DependentUpon>ucFilterList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucInfo.resx">
       <DependentUpon>ucInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSubMenu.resx">
+      <DependentUpon>ucSubMenu.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

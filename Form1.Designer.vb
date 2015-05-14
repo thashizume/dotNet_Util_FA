@@ -43,7 +43,7 @@ Partial Class Form1
         Me.MoveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
-        Me.UcInfo1 = New jp.polestar.io.FileAnalyze.ucInfo()
+        Me.UcInfo1 = New jp.polestar.io.FileAnalyze.ucSubMenu()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -239,6 +239,6 @@ Partial Class Form1
     Friend WithEvents DeleteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MoveToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
-    Friend WithEvents UcInfo1 As jp.polestar.io.FileAnalyze.ucInfo
+    Friend WithEvents UcInfo1 As jp.polestar.io.FileAnalyze.ucSubMenu
 
 End Class
